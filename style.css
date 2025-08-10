@@ -1,0 +1,479 @@
+.nav-button{
+
+  display: none;
+}
+
+.bar{
+  width: 1.5rem; 
+  height: 0.2rem;
+  margin-bottom: 0.3rem; 
+  background-color: rgb(62, 63, 63); 
+  border-radius: 2px;
+}
+/* ---------- STYLES TABLETTE (max 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  header nav ul {
+    gap: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image img {
+    width: 320px;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advantage-list {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .footer-links {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+/* ---------- STYLES MOBILE (max 768px) ---------- */
+@media (max-width: 768px) {
+
+  header nav {
+    display: wrap ;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    color: red;
+  }
+
+  #se_connecter{
+    display: none;
+  }
+
+
+  .nav-liste {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+   
+  
+  }
+  
+
+  .nav-liste.active{
+    display: flex;
+    
+  }
+
+
+
+  .btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  .hero {
+    padding: 0rem;
+  }
+  .hero-content{
+    min-width: 90% ;
+    width: 100%;
+  }
+  .hero-content h1 {
+    font-size: 0.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    display: none;
+  }
+
+  .estimation-form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .service-cards {
+    gap: 1.5rem;
+  }
+
+  .advantage-list {
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  footer .footer-links {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+/* ---------- STYLES TÉLÉPHONES PETITS (max 480px) ---------- */
+@media (max-width: 480px) {
+
+
+
+  header .logo {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    display: none;
+  }
+
+  .estimation-form input,
+  .estimation-form select {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    background: #fff;
+  }
+
+  .hero-image img {
+    width: 220px;
+  }
+
+  .service-cards .card {
+    max-width: 90%;
+  }
+
+  .advantage {
+    max-width: 90%;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f5faff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #333;
+  transition:  0.4s;
+}
+
+header ul li a:hover {
+  color: #007bff;
+  padding-bottom: 0.3rem;
+  border-bottom: solid 2px #0056b3;
+}
+
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-secondary {
+  background: #f0f8ff;
+  color: #007bff;
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  background: linear-gradient(to right, #eaf4ff, #ffffff);
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #0d2c54;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.hero-image img {
+  width: 420px;
+  max-width: 100%;
+}
+
+/* ---------- FORMULAIRE ---------- */
+.estimation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 380px;
+}
+
+
+.estimation-form select{
+  color: #757575;
+  background-color: #fff;
+}
+.estimation-form input,
+.estimation-form select,
+.estimation-form button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  
+}
+
+.estimation-form input:focus,
+.estimation-form select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.estimation-form button {
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- SERVICES ---------- */
+.services {
+  background-color: white;
+  text-align: center;
+  padding: 4rem 5%;
+}
+
+.services h2 {
+  font-size: 2rem;
+  color: #0d2c54;
+  margin-bottom: 1rem;
+}
+
+.services p {
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.service-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-cards .card {
+  background: #f8fbff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  flex: 1;
+  max-width: 300px;
+}
+
+.service-cards .card h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+/* ---------- AVANTAGES ---------- */
+.advantages {
+  background: #eef6ff;
+  padding: 4rem 5%;
+  text-align: center;
+}
+
+.advantages h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0d2c54;
+}
+
+.advantages p {
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.advantage-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.advantage {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  max-width: 220px;
+}
+
+.advantage h3 {
+  color: #007bff;
+  margin: 0.5rem 0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #0d2c54;
+  color: #fff;
+  padding: 3rem 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .footer-text {
+  max-width: 400px;
+}
+
+footer .footer-text h3 {
+  margin-bottom: 1rem;
+}
+
+footer .footer-links {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+footer .footer-links h4 {
+  margin-bottom: 0.8rem;
+  color: #aad4ff;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #aad4ff;
+}
+
+.info_w ,
+.estimation-result{
+  color: white;
+  background-color: rgba(255,0 , 0 ,0.5);
+  padding: 1.25rem ;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  display: none;
+}
+.estimation-result{
+  background-color: rgba(67, 204, 25, 0.5);
+}
+
+.estimation-result.active,
+.info_w.active{
+  display: inline;
+}
+label {
+  text-align: start;
+}
+
